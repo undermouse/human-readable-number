@@ -15,7 +15,7 @@ module.exports = function toReadable(number) { // module.exports =
     let hrnTens = {
         10: 'ten',
         11: 'eleven',
-        12: 'twelwe',
+        12: 'twelve',
         13: 'thirteen',
         14: 'fourteen',
         15: 'fifteen',
@@ -42,6 +42,10 @@ module.exports = function toReadable(number) { // module.exports =
     // console.log(ones);
 
     let hundredsStr, tensStr, onesStr = '';
+
+    if (number === 0) return 'zero';
+    if (number === 100) return 'one hundred';
+
     if (number > 100) {
         switch (hundreds) {
             case 0:
@@ -141,58 +145,57 @@ module.exports = function toReadable(number) { // module.exports =
             onesStr = hrn[9];
             break;
     }
-if (tens === 1) {
-    switch (ones) {    
-    case 0:
-            tensStr = '';
-            onesStr = hrnTens[10];
-            break;
-        case 1:
-            tensStr = '';
-            onesStr = hrnTens[11];
-            break;
-        case 2:
-            tensStr = '';
-            onesStr = hrnTens[12];
-            break;
-        case 3:
-            tensStr = '';
-            onesStr = hrnTens[13];
-            break;
-        case 4:
-            tensStr = '';
-            onesStr = hrnTens[14];
-            break;
-        case 5:
-            tensStr = '';
-            onesStr = hrnTens[15];
-            break;
-        case 6:
-            tensStr = '';
-            onesStr = hrnTens[16];
-            break;
-        case 7:
-            tensStr = '';
-            onesStr = hrnTens[17];
-            break;
-        case 8:
-            tensStr = '';
-            onesStr = hrnTens[18];
-            break;
-        case 9:
-            tensStr = '';
-            onesStr = hrnTens[19];
-            break;
+    if (tens === 1) {
+        switch (ones) {
+            case 0:
+                tensStr = '';
+                onesStr = hrnTens[10];
+                break;
+            case 1:
+                tensStr = '';
+                onesStr = hrnTens[11];
+                break;
+            case 2:
+                tensStr = '';
+                onesStr = hrnTens[12];
+                break;
+            case 3:
+                tensStr = '';
+                onesStr = hrnTens[13];
+                break;
+            case 4:
+                tensStr = '';
+                onesStr = hrnTens[14];
+                break;
+            case 5:
+                tensStr = '';
+                onesStr = hrnTens[15];
+                break;
+            case 6:
+                tensStr = '';
+                onesStr = hrnTens[16];
+                break;
+            case 7:
+                tensStr = '';
+                onesStr = hrnTens[17];
+                break;
+            case 8:
+                tensStr = '';
+                onesStr = hrnTens[18];
+                break;
+            case 9:
+                tensStr = '';
+                onesStr = hrnTens[19];
+                break;
+        }
     }
-}
 
-resultingString = hundredsStr + "" + tensStr + "" + onesStr;
-resultingString.replace(/\s+/g, ' ').trim()
-return resultingString;
+    resultingString = hundredsStr + "" + tensStr + "" + onesStr;
+    return resultingString.trim();
 
 }
 
 
-// console.log(toReadable(919));
-// console.log(toReadable(959));
-// console.log(toReadable(900));
+// console.log(toReadable(890));
+// console.log(toReadable(980));
+// console.log(toReadable(812));
