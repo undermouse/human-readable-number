@@ -186,7 +186,9 @@ if (tens === 1) {
     }
 }
 
-return (hundredsStr + "" + tensStr + " " + onesStr);
+resultingString = hundredsStr + "" + tensStr + " " + onesStr;
+resultingString.replace(/\s+/g, ' ').trim()
+return resultingString;
 
 }
 
