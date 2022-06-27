@@ -23,23 +23,23 @@ module.exports = function toReadable(number) { // module.exports =
         17: 'seventeen',
         18: 'eighteen',
         19: 'nineteen',
-        2: 'twenty',
-        3: 'thirty',
-        4: 'forty',
-        5: 'fifty',
-        6: 'sixty',
-        7: 'seventy',
-        8: 'eighty',
-        9: 'ninety'
+        2: 'twenty ',
+        3: 'thirty ',
+        4: 'forty ',
+        5: 'fifty ',
+        6: 'sixty ',
+        7: 'seventy ',
+        8: 'eighty ',
+        9: 'ninety '
     }
 
     let hundreds = Math.trunc(number / 100);
     let tens = (Math.trunc(number / 10)) % 10;
     let ones = Math.trunc(number % 10);
 
-    console.log(hundreds);
-    console.log(tens);
-    console.log(ones);
+    // console.log(hundreds);
+    // console.log(tens);
+    // console.log(ones);
 
     let hundredsStr, tensStr, onesStr = '';
     if (number > 100) {
@@ -186,9 +186,13 @@ if (tens === 1) {
     }
 }
 
-resultingString = hundredsStr + "" + tensStr + " " + onesStr;
+resultingString = hundredsStr + "" + tensStr + "" + onesStr;
 resultingString.replace(/\s+/g, ' ').trim()
 return resultingString;
 
 }
 
+
+// console.log(toReadable(919));
+// console.log(toReadable(959));
+// console.log(toReadable(900));
