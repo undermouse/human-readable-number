@@ -48,31 +48,31 @@ module.exports = function toReadable(number) { // module.exports =
                 hundredsStr = '';
                 break;
             case 1:
-                hundredsStr = hrn[1] + ' hundred ';
+                hundredsStr = hrn[1] + ' hundred';
                 break;
             case 2:
-                hundredsStr = hrn[2] + ' hundred ';
+                hundredsStr = hrn[2] + ' hundred';
                 break;
             case 3:
-                hundredsStr = hrn[3] + ' hundred ';
+                hundredsStr = hrn[3] + ' hundred';
                 break;
             case 4:
-                hundredsStr = hrn[4] + ' hundred ';
+                hundredsStr = hrn[4] + ' hundred';
                 break;
             case 5:
-                hundredsStr = hrn[5] + ' hundred ';
+                hundredsStr = hrn[5] + ' hundred';
                 break;
             case 6:
-                hundredsStr = hrn[6] + ' hundred ';
+                hundredsStr = hrn[6] + ' hundred';
                 break;
             case 7:
-                hundredsStr = hrn[7] + ' hundred ';
+                hundredsStr = hrn[7] + ' hundred';
                 break;
             case 8:
-                hundredsStr = hrn[8] + ' hundred ';
+                hundredsStr = hrn[8] + ' hundred';
                 break;
             case 9:
-                hundredsStr = hrn[9] + ' hundred ';
+                hundredsStr = hrn[9] + ' hundred';
                 break;
         }
     } else {
